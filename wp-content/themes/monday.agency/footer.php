@@ -38,7 +38,7 @@
 						<?php endif; ?>
 						<?= do_shortcode($form_settings['shortcode']); ?>
 					</div>
-				</div>				
+				</div>
 			</div>
 		</div>
 	</div>

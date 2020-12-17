@@ -19,7 +19,7 @@ register_nav_menus(array(
     'header'    => 'Главное меню',
 ));
 
-function projects() {	
+function projects() {
 	$labels = array(
 		'name'                  => __( 'Проекты', 'Post Type General Name', 'text_domain' ),
 		'singular_name'         => __( 'Проект', 'Post Type Singular Name', 'text_domain' ),
@@ -63,7 +63,7 @@ function projects() {
 }
 add_action( 'init', 'projects');
 
-function testimonials() {	
+function testimonials() {
 	$labels = array(
 		'name'                  => __( 'Отзывы', 'Post Type General Name', 'text_domain' ),
 		'singular_name'         => __( 'Отзыв', 'Post Type Singular Name', 'text_domain' ),
@@ -199,4 +199,16 @@ function body_classes(){
 		}
 	}
 	return $class;
+}
+
+function my_flag_only_language_switcher() {
+    $languages = apply_filters( 'wpml_active_languages', NULL, 'orderby=id&order=desc' );
+
+    if ( !empty( $languages ) ) {
+        foreach( $languages as $l ) {
+            if ( !$l['active'] ) echo ' <a href="' . esc_url( $l['url'] ) . '">';
+            echo esc_attr( $l['tag'] );
+            if ( !$l['active'] ) echo '</a> ';
+        }
+    }
 }

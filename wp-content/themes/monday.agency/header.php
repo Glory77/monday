@@ -68,10 +68,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 									<?php endif; ?>
 								</li>
 							<?php } ?>
+							<li>
+							<?php
+							echo my_flag_only_language_switcher();
+							?>
+							</li>
 						</ul>
 					</nav>
 				<?php endif; ?>
-				
+
 				<div class="footer-wrapper">
 					<div class="footer-contacts">
 						<?php $email = get_field('email', 'option'); ?>
@@ -86,7 +91,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							<a href="tel:<?= $phone; ?>" class="h2">
 								<?= $phone; ?>
 							</a>
-						<?php endif; ?>					
+						<?php endif; ?>
 					</div>
 					<div class="copyright-wrapper">
 						© Monday <?= date('Y'); ?>
