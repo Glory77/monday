@@ -13,7 +13,7 @@ get_header(); ?>
 		'meta_key'    => '',
 		'meta_value'  =>'',
 		'post_type'   => 'projects',
-		'suppress_filters' => true,
+		'suppress_filters' => false,
 	) ); ?>
 	<section class="what projects-rows" id="what">
 		<div class="what-wrapper">
